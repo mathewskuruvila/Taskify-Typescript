@@ -1,14 +1,17 @@
 import React from 'react';
+import "./App.css";
+import InputFeild from "./components/InputFeild";
 
-import './App.css';
 
+const App: React.FC= ()=>{
 
-function App() {
-  return (
-    <>
-
-    </>
-  );
+  return(
+    <div className='App'>
+      <span className='heading'>Taskify</span>
+      <InputFeild/>
+    </div>
+  )
 }
 
-export default App;
+export default App
+
