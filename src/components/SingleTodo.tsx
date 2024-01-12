@@ -2,6 +2,7 @@ import react from "react";
 import { Todo } from "../models/model";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete, MdDoneOutline } from "react-icons/md";
+import "./styles.css"
 
 type Props = {
     todo: Todo;
