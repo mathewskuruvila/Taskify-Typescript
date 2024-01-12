@@ -32,12 +32,12 @@
     transition: 0.2s all;
     box-shadow: 0 0 10px black;
 }
-.input_submit:hover{
+ .input_submit:hover{
     background-color: black;
-}
+} 
 .input_submit:active{
-    transform: scale(0,8);
-    box-shadow: 0 0 5px black;
+    transform: scale(0,1);
+    box-shadow: 0 0 5px black; 
 }
 .todos{
     display: flex;
@@ -57,7 +57,10 @@
     flex:1;
     padding: 5px;
     border: none;
-    font-size: 20px;
+    color: rgb(255, 0, 0);
+    font-size: x-large;
+    font-weight: 500;
+    font-style: initial;
 }
 .todos_single--text:focus{
     outline: none;
@@ -66,6 +69,7 @@
     margin-left: 10px;
     font-size:pointer;
     cursor:pointer;
+    font-size: 29px;
 }
 @media(max-width:700px){
     .input{
