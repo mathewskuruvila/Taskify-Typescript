@@ -4,28 +4,36 @@ import { FaEdit } from "react-icons/fa";
 import { MdDelete, MdDoneOutline } from "react-icons/md";
 import "./styles.css"
 
+
 type Props = {
     todo: Todo;
     todos: Todo[];
     setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 };
 
-const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
+const SingleTodo = ({ todo, todos, setTodos }: Props) => {
+
+    const handleDone = (id: number) => {
+        setTodos(todos.map((t) => t.id === id ? { ...t, isDone: !t.isDone } : t));
+    };
+
     return (
         <form className="todos_single">
             <span className="todos_single--text">{todo.todo}</span>
             <div>
                 <span className="icon">
-                    <FaEdit />{" "}
+                    <FaEdit />
                 </span>
                 <span className="icon">
-                    <MdDelete />{" "}
+                    <MdDelete />
                 </span>
-                <span className="icon">
+                <span className="icon" onClick={() => handleDone(todo.id)}>
                     <MdDoneOutline />
                 </span>
             </div>
         </form>
     );
 };
+
 export default SingleTodo;
+
