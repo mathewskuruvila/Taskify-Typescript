@@ -14,7 +14,7 @@ type Props = {
 const SingleTodo = ({ todo, todos, setTodos }: Props) => {
 
     const handleDone = (id: number) => {
-        setTodos(todos.map((t) => t.id === id ? { ...t, isDone: !t.isDone } : t));
+        setTodos(todos.map((t) => t.id === id ? { ...todo, isDone: !t.isDone } : todo));
     };
 
     return (

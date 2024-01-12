@@ -14,10 +14,10 @@
     transition: 0.2s;
     box-shadow: inset 0 0 5px black;
 }
-.input_box:focus{
+/* .input_box:focus{
     box-shadow: 0 0 10px 1000px rgb(0, 62, 56);
     outline: none;
-}
+} */
 .input_submit{
     position:absolute;
     width: 50px;
