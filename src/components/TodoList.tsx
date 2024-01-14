@@ -19,8 +19,10 @@ const TodoList: React.FC<Props> = ({ todos, setTodos ,completedTodos,setComplete
                     (provided)=>(
                         <div className="todos" ref={provided.innerRef}{...provided.droppableProps}>
                     <span className="todos_heading">Active tasks</span>
-                    {todos.map((todo) => (
-                        <SingleTodo todo={todo} todos={todos} key={todo.id} setTodos={setTodos} />
+                    {todos.map((todo,index) => (
+                        <SingleTodo 
+                        index={index}
+                        todo={todo} todos={todos} key={todo.id} setTodos={setTodos} />
                     ))}
                 </div>
                     )
@@ -34,7 +36,9 @@ const TodoList: React.FC<Props> = ({ todos, setTodos ,completedTodos,setComplete
                         <span className="todos_heading">Completed tasks</span>
         
                         {completedTodos.map((todo) => (
-                            <SingleTodo todo={todo} todos={completedTodos} key={todo.id}  setTodos={setCompletedTodos} />
+                            <SingleTodo 
+                            index={index}
+                            todo={todo} todos={completedTodos} key={todo.id}  setTodos={setCompletedTodos} />
                         ))}
                     </div>
                     )
